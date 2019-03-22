@@ -2,8 +2,9 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp2.2</TargetFramework>
-    <RuntimeFrameworkVersion>2.2.0</RuntimeFrameworkVersion>
+    <RuntimeFrameworkVersion>2.2.0</RuntimeFrameworkVersion>    
     <PlatformTarget>AnyCPU</PlatformTarget>
+    <RuntimeIdentifier>win-x64</RuntimeIdentifier>
     <Authors>Marco Aurélio</Authors>
     <Copyright>Marco Aurélio (C) 2019</Copyright>
     <PackageProjectUrl>https://github.com/marcoaurelioit/marco-swagger</PackageProjectUrl>
