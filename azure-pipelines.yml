@@ -15,7 +15,7 @@ variables:
   buildConfiguration: 'Release'
 
 #Marco.Swagger
-  Pack1Version: '1.1.0'
+  Pack1Version: '1.2.0'
   Pack1PushToNuget: True
 
 steps:
