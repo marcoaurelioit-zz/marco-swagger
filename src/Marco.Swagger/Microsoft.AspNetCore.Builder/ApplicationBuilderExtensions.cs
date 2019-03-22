@@ -5,11 +5,13 @@ namespace Microsoft.AspNetCore.Builder
 {
     public static class ApplicationBuilderExtensions
     {
-        public static IApplicationBuilder UseMarcoSwagger(this IApplicationBuilder applicationBuilder,
-            IApiVersionDescriptionProvider apiVersionDescriptionProvider)
+        public static IApplicationBuilder UseMarcoSwagger(this IApplicationBuilder applicationBuilder)
         {
             if (applicationBuilder == null)
                 throw new ArgumentNullException(nameof(applicationBuilder));
+
+            var apiVersionDescriptionProvider = (IApiVersionDescriptionProvider)applicationBuilder
+                .ApplicationServices.GetService(typeof(IApiVersionDescriptionProvider));
 
             if (apiVersionDescriptionProvider == null)
                 throw new ArgumentNullException(nameof(apiVersionDescriptionProvider));
