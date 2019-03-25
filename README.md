@@ -9,3 +9,34 @@ Package base Swagger for WebApi AspNetCore.
 ||Version|Downloads|
 |---------------------------|:---:|:---:|
 |**Marco.Swagger**|[![NuGet](https://img.shields.io/nuget/v/Marco.Swagger.svg)](https://www.nuget.org/packages/Marco.Swagger/)|![NuGet](https://img.shields.io/nuget/dt/Marco.Swagger.svg)|
+
+
+To use the package you will need to make the following settings in the WebApi Startup
+
+**Configure Services**
+
+```c#
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddSwagger(Configuration);
+}
+```
+**Configure Middlewares**
+```c#
+public void Configure(IApplicationBuilder app, 
+    IApiVersionDescriptionProvider apiVersionDescriptionProvider)
+{         
+    app.UseMvc();
+    app.UseSwaggerUI();
+}
+````
+**Add API Meta data in appsettings.json**
+
+```Json
+"ApiMetaData": {
+    "Name": "WebApi",
+    "Description": "Description WebApi em AspNetCore",
+    "DefaultVersion": "1.0",
+    "VersionIngDescriptions": []
+  }
+```
