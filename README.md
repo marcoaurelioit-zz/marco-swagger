@@ -23,8 +23,7 @@ public void ConfigureServices(IServiceCollection services)
 ```
 **Configure Middlewares**
 ```c#
-public void Configure(IApplicationBuilder app, 
-    IApiVersionDescriptionProvider apiVersionDescriptionProvider)
+public void Configure(IApplicationBuilder app)
 {         
     app.UseMvc();
     app.UseSwaggerUI();
