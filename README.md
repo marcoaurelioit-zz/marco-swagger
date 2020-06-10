@@ -18,7 +18,7 @@ To use the package you will need to make the following settings in the WebApi St
 ```c#
 public void ConfigureServices(IServiceCollection services)
 {
-    services.AddSwagger(Configuration);
+    services.AddMarcoSwagger(Configuration);
 }
 ```
 **Configure Middlewares**
@@ -26,7 +26,7 @@ public void ConfigureServices(IServiceCollection services)
 public void Configure(IApplicationBuilder app)
 {         
     app.UseMvc();
-    app.UseSwaggerUI();
+    app.UseMarcoSwagger();
 }
 ````
 **Add API Meta data in appsettings.json**
